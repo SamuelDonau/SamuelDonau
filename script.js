@@ -1,3 +1,3 @@
-window.onbeforeunload = function(){
-  return 'Wil je de website verlaten?';
-};
+function wip() {
+  alert("Deze pagina is nog niet beschikbaar.");
+}
