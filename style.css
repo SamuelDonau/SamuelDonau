@@ -77,6 +77,7 @@ nav {
   z-index: 5;
   position: -webkit-sticky;
   position: sticky;
+  float: inherit;
   top: 0;
   overflow: hidden;
   width: 100%;
@@ -121,8 +122,10 @@ nav a {
   font-weight: 300;
   text-transform: none;
   position: fixed;
-  display: none;
+  float: inherit;
+  display: block ;
   width: 220px;
+  overflow: auto;
   background-color:rgba(0, 0, 0, 1);
 }
 
