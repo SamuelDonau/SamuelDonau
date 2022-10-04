@@ -15,7 +15,6 @@ html {
 html::-webkit-scrollbar {
   display: none;
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .wrapper{
   margin: 0 auto 0 auto;
