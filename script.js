@@ -7,5 +7,5 @@ function openInNewTab(url) {
 }
 
 function nw() {
-  window.open("Belangrijke Brief.pdf", "_blank", "width=400", "height=400");
+  window.open("Belangrijke Brief.pdf", "_blank", "width=100%", "height=100%");
 }
