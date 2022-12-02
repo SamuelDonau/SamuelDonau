@@ -1,11 +1,14 @@
 html {
   box-sizing: border-box;
-  background-image: url("background.jpg");
+  background-image: url("background4.jpg");
   background-size: 100% 95%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;
-  font-family: 'Open Sans', serif;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: oblique;
+  font-weight: 500;
   font-size: 11px;
   min-height: 100%;
   -ms-overflow-style: none;  /* IE and Edge */
@@ -22,6 +25,7 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  flex: 1;
 }
 
 .wrapper2{
@@ -56,6 +60,8 @@ article, section, h1, h2, h3{
 
 body {
   margin: 0px;
+
+  min-height: 100vh;
 }
 
 footer {
