@@ -1,11 +1,10 @@
 html {
   box-sizing: border-box;
   background-image: url("background4.jpg");
-  background-size: 100% 120%;
+  background-size: 100% 122.5%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: bottom;
   font-family: sans-serif;
   font-weight: bold;
   font-style: oblique;
@@ -92,7 +91,7 @@ footer {
   line-height: inherit;
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items: center;
 }
 
 .footerimg {
