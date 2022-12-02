@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background-image: url("ny-background.jpg");
+  background-image: url("background.jpg");
   background-size: 100% 95%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -66,6 +66,12 @@ footer {
   width: 100%;
   margin-top: auto;
   font-weight: 500;
+  z-index: 5;
+  position: -webkit-sticky;
+  float: inherit;
+  top: 0;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .footerimg {
@@ -89,7 +95,6 @@ footer {
 footer p{
   color: white;
   opacity: 0.25;
-  margin-top: 30px;
   margin-left: 715px;
 }
 
