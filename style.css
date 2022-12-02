@@ -1,7 +1,8 @@
 html {
   box-sizing: border-box;
   background-image: url("background4.jpg");
-  background-size: 100% 95%;
+  background-size: 100% 120%;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;
@@ -13,7 +14,15 @@ html {
   min-height: 100%;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  text-shadow: 1px 1px black;
+  text-shadow: 2.5px 1px black;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 html::-webkit-scrollbar {
@@ -29,7 +38,7 @@ html::-webkit-scrollbar {
 }
 
 .wrapper2{
-  text-color
+  color: white;
 }
 
 a, a:visited, a:hover, a:active {
@@ -60,24 +69,30 @@ article, section, h1, h2, h3{
 
 body {
   margin: 0px;
-
-  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
 }
 
 footer {
-  position: relative;
+  position: absolute;
+  right: 0;
   bottom: 0;
+  left: 0;
   background-color: rgb(46, 46, 48, 1);
-  padding: 1.5% 0 1.5% 0;
+  padding: 2% 0 2% 0;
   width: 100%;
   margin-top: auto;
   font-weight: 500;
   z-index: 5;
   position: -webkit-sticky;
   float: inherit;
-  top: 0;
   overflow: hidden;
   margin: 0 auto;
+  line-height: inherit;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .footerimg {
@@ -101,7 +116,10 @@ footer {
 footer p{
   color: white;
   opacity: 0.25;
-  margin-left: 715px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
 }
 
 #footerp{
@@ -121,6 +139,7 @@ nav {
   color: #f0f0f0;
   background-color: rgba(0, 0, 0, 1);
   padding: 0px;
+  height: 55px;
 }
 
 nav ul {
