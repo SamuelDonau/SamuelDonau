@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background-image: url("background.png");
+  background-image: url("ny-background.jpg");
   background-size: 100% 95%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -10,6 +10,7 @@ html {
   min-height: 100%;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  text-shadow: 1px 1px black;
 }
 
 html::-webkit-scrollbar {
@@ -21,6 +22,10 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.wrapper2{
+  text-color
 }
 
 a, a:visited, a:hover, a:active {
