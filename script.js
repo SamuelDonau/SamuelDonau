@@ -9,3 +9,13 @@ function openInNewTab(url) {
 function nw() {
   window.open("Belangrijke Brief.pdf", "_blank", "width=100%", "height=100%");
 }
+
+function bk(){
+  var audio = new Audio('bergkamp.mp3');
+  if (audio.paused != true){
+    audio.pause();
+  } else {
+    audio.play();
+  }
+
+}

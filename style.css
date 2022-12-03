@@ -1,10 +1,5 @@
 html {
   box-sizing: border-box;
-  background-image: url("background4.jpg");
-  background-size: 100% 122.5%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   font-family: sans-serif;
   font-weight: bold;
   font-style: oblique;
@@ -19,9 +14,27 @@ html {
   scroll-behavior: smooth;
 }
 
-*,
-*:before,
-*:after {
+@media screen and (min-width:960px){
+  body{
+    background-image: url("background8.jpg");
+    background-size: 100% 122.5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (max-width:960px) {
+  body{
+    background-image: url("marco.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
@@ -62,6 +75,20 @@ header{
   float: right;
   height: 55px;
   width: 300px;
+}
+
+#bk{
+  float: right;
+}
+
+#mail:hover{
+  color: grey;
+}
+
+#mail{
+  text-decoration: underline;
+  text-decoration-style: dashed;
+
 }
 
 #menulogo{
@@ -138,6 +165,47 @@ footer p{
 
 }
 
+.vidgvb{
+  display: inline-block;
+  vertical-align: bottom;
+  border-top: 8px solid #1C6EA4;
+  border-radius: 1px;
+  border-spacing: 100px;
+  border-color: rgb(0, 0, 0, 1);
+  margin-bottom: 40px;
+  background-color: rgb(40, 40, 40, 0.75);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  margin-bottom: -33%;
+  margin-right: 40px;
+  font-size: 12px;
+}
+
+.fotgvb{
+  display: inline-block;
+  vertical-align: bottom;
+  border-top: 8px solid #1C6EA4;
+  border-radius: 1px;
+  border-spacing: 100px;
+  border-color: rgb(0, 0, 0, 1);
+  margin-bottom: 40px;
+  background-color: rgb(40, 40, 40, 0.75);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  margin-bottom: -33%;
+  margin-right: 40px;
+  font-size: 12px;
+}
+
+
+.valt{
+  text-align: center;
+}
+
 nav {
   z-index: 5;
   position: -webkit-sticky;
@@ -177,6 +245,7 @@ nav a {
   display: inline-block;
   position: relative;
   background-color: rgba(0, 0, 0, 1);
+  transition: all 0.125s ease-in;
 }
 .nav-menu-item:hover {
   background-color: rgba(150, 150, 150, 1);
@@ -184,6 +253,8 @@ nav a {
 .nav-menu-item:hover .nav-submenu {
   background-color: rgba(150, 150, 150, 1);
   display: inline;
+  transform: translateY(0); /* here */
+  opacity: 1; /* here */
 }
 .nav-submenu {
   font-weight: 300;
@@ -193,12 +264,21 @@ nav a {
   width: 220px;
   background-color:rgba(0, 0, 0, 1);
   display: none;
-  top: 55px
+  top: 55px;
+  max-width: 135px;
 }
 
 .nav-submenu-item {
   background: rgba(0, 0, 0, 1);
+  opacity: 0;
   font-weight: 500;
+  transition: all 0.125s ease-in; /* here */
+  transform: translateY(-10px); /* here */
+}
+.nav-menu:hover .nav-submenu-item {
+/*   display: block; */ /* no need for display block and none, you can depend on opacity as long as the position is absolute*/
+  transform: translateY(0); /* here */
+  opacity: 1; /* here */
 }
 
 .nav-submenu-item:hover {
