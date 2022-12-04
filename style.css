@@ -87,11 +87,11 @@ header{ /*header rechtsboven zetten */
   float: right;
 }
 
-#mail:hover{
+.link:hover{
   color: grey;
 }
 
-#mail{
+.link{
   text-decoration: underline;
   text-decoration-style: dashed;
 
@@ -169,75 +169,45 @@ footer p{ /* tekst footer in midden van footer zetten */
   text-align: center;
 }
 
-@media screen and (min-width:960px){  /* website responsive maken */
-  .vidgvb{ /* videos naast elkaar zetten en container opmaken */
-    display: inline-block;
-    vertical-align: bottom;
-    border-top: 8px solid #1C6EA4;
-    border-radius: 1px;
-    border-spacing: 100px;
-    border-color: rgb(0, 0, 0, 1);
-    background-color: rgb(40, 40, 40, 0.75);
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-    margin-bottom: -33%;
-    margin-right: 40px;
-    font-size: 12px;
-  }
+.vidgvb{ /* container opmaken */
+  border-top: 8px solid #1C6EA4;
+  border-radius: 1px;
+  border-color: rgb(0, 0, 0, 1);
+  background-color: rgb(40, 40, 40, 0.75);
+  font-size: 12px;
+  flex: 1;
+  padding-left: 25px;
+  padding-right: 25px;
 
-  .fotgvb{ /* fotos naast elkaar zetten en container opmaken */
-    display: inline-block;
-    vertical-align: bottom;
-    border-top: 8px solid #1C6EA4;
-    border-radius: 1px;
-    border-spacing: 100px;
-    border-color: rgb(0, 0, 0, 1);
-    margin-bottom: 40px;
-    background-color: rgb(40, 40, 40, 0.75);
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 10px;
-    padding-top: 20px;
-    margin-bottom: -33%;
-    margin-right: 40px;
-    font-size: 12px;
-  }
 }
 
-@media screen and (max-width:960px) {
-  .vidgvb{ /* videos naast elkaar zetten en container opmaken */
-    display: inline-block;
-    vertical-align: bottom;
-    border-top: 8px solid #1C6EA4;
-    border-radius: 1px;
-    border-spacing: 100px;
-    border-color: rgb(0, 0, 0, 1);
-    background-color: rgb(40, 40, 40, 0.75);
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-    margin-bottom: 25px;
-    margin-right: 40px;
-    font-size: 12px;
-  }
-
-  .fotgvb{ /* fotos naast elkaar zetten en container opmaken */
-    display: inline-block;
-    vertical-align: bottom;
-    border-top: 8px solid #1C6EA4;
-    border-radius: 1px;
-    border-spacing: 100px;
-    border-color: rgb(0, 0, 0, 1);
-    background-color: rgb(40, 40, 40, 0.75);
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 20px;
-    margin-bottom: 25px;
-    margin-right: 40px;
-    font-size: 12px;
-  }
+.fotgvb{ /* container opmaken */
+  border-top: 8px solid #1C6EA4;
+  border-radius: 1px;
+  border-color: rgb(0, 0, 0, 1);
+  background-color: rgb(40, 40, 40, 0.75);
+  font-size: 12px;
+  flex: 1;
+  margin-left: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 20px;
 }
+
+.fotgvb:first-child{
+  margin-right: 20px;
+}
+
+.vidgvb:first-child{
+  margin-right: 20px;
+}
+
+.gvb{ /* alles naast elkaar */
+    display: flex;
+    width: 25%;
+    margin-top: 13.5%;
+}
+
 
 table, tr, td, th{
   font-style: normal;
