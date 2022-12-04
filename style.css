@@ -206,7 +206,8 @@ footer p{ /* tekst footer in midden van footer zetten */
     display: flex;
     width: 25%;
     margin-top: 13.5%;
-    resize: none;
+    max-width: 630px;
+    margin-bottom: 10%;
 }
 
 
