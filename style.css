@@ -210,8 +210,23 @@ footer p{ /* tekst footer in midden van footer zetten */
     margin-bottom: 10%;
 }
 
+#wklist{ /* lijst opmaken en aangeven dat deze properties belangrijker zijn dan andere*/
+  float: left;
+  font-style: normal !important;
+  border: 6px solid !important;
+  border-collapse: collapse !important;
+  text-align: center !important;
+  border-color: black !important;
+  background-color: rgba(50, 50, 50, 0.75) !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  margin: auto !important;
+  margin-top: 10% !important;
+  padding: 10px !important;
+}
 
-table, tr, td, th{
+table.poule, table.poule *{
   font-style: normal;
   border: 6px solid;
   border-collapse: collapse;
@@ -229,6 +244,7 @@ table, tr, td, th{
 .valt{ /* tekst onder afbeeldingen en videos zetten in het midden zetten*/
   text-align: center;
 }
+
 
 nav { /* menu bovenste laag maken en laten plakken aan bovenkant */
   z-index: 5;
