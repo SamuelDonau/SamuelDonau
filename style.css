@@ -77,12 +77,6 @@ header{ /*header rechtsboven zetten */
   font-size: 75px;
 }
 
-#drho{
-  float: right;
-  height: 55px;
-  width: 300px;
-}
-
 #bk{ /* knop rechtsboven menu zetten */
   float: right;
 }
