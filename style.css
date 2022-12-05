@@ -12,6 +12,7 @@ html {
   height: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  white-space: wrap;
 }
 @media screen and (max-width:960px){
   #homet{
@@ -182,18 +183,18 @@ footer p{ /* tekst footer in midden van footer zetten */
   background-color: rgb(40, 40, 40, 0.75);
   font-size: 12px;
   flex: 1;
-  margin-left: 20px;
+  margin-left: 10%;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 20px;
 }
 
 .fotgvb:first-child{
-  margin-right: 20px;
+  margin-right: 10%;
 }
 
 .vidgvb:first-child{
-  margin-right: 20px;
+  margin-right: 10%;
 }
 
 .gvb{ /* alles naast elkaar */
@@ -201,7 +202,8 @@ footer p{ /* tekst footer in midden van footer zetten */
     width: 25%;
     margin-top: 13.5%;
     max-width: 630px;
-    margin-bottom: 10%;
+    margin-bottom: 7.5%;
+    margin-left: 2.5%;
 }
 
 #wklist{ /* lijst opmaken en aangeven dat deze properties belangrijker zijn dan andere*/
@@ -215,9 +217,9 @@ footer p{ /* tekst footer in midden van footer zetten */
   color: white !important;
   font-weight: bold !important;
   font-size: 20px !important;
-  margin: auto !important;
   margin-top: 10% !important;
   padding: 10px !important;
+  margin-bottom: 7.5%;
 }
 
 table.poule, table.poule *{
@@ -230,8 +232,9 @@ table.poule, table.poule *{
   color: white;
   font-weight: bold;
   font-size: 50px;
-  margin: auto;
+  margin-bottom: 7.5%;
   margin-top: 10%;
+  margin-left: 2.5%;
   padding: 10px;
 }
 
@@ -240,81 +243,153 @@ table.poule, table.poule *{
 }
 
 
-nav { /* menu bovenste laag maken en laten plakken aan bovenkant */
-  z-index: 5;
-  position: -webkit-sticky;
-  position: sticky;
-  float: inherit;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
-  background: #1e8449;
-  color: #f0f0f0;
-  background-color: rgba(0, 0, 0, 1);
-  padding: 0px;
-  height: 55px;
-  min-width: 100%;
+
+@media screen and (max-width:575px){
+    #sidenavbutton{
+      display: inline-block;
+      font-size:30px;
+      cursor:pointer;
+      width: 35px;
+      font-style: normal;
+      text-shadow: none !important;
+      margin-left: 1%;
+      margin-top: 0%;
+    }
+
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: inline-block;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  nav{
+    display: none;
+  }
 }
 
-nav ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
+@media screen and (min-width:575px){
+  #sidenavbutton{
+    display: none;
+  }
 
-nav a {
-  display: block;
-  padding: 0 16px;
-  line-height: inherit;
-  cursor: pointer; /* cursor zelfde laten zijn als altijd bij het hoveren over een knop in het menu */
-}
-.nav-menu {
-  line-height: 55px;
-  font-weight: 700;
-  text-transform: uppercase; /* alle tekst in menu hoofdletters */
-}
-.nav-menu-item {
-  display: inline-block;
-  position: relative;
-  background-color: rgba(0, 0, 0, 1);
-  transition: all 0.125s ease-in; /* tijdens het hoveren over menu knop 0.125s voor kleur veranderen */
-}
-.nav-menu-item:hover {
-  background-color: rgba(150, 150, 150, 1);
-}
-.nav-menu-item:hover .nav-submenu {
-  background-color: rgba(150, 150, 150, 1);
-  display: inline;
-  transform: translateY(0);
-  opacity: 1;
-}
-.nav-submenu {
-  font-weight: 300;
-  text-transform: none;
-  position: fixed;
-  overflow: none;
-  width: 220px;
-  background-color:rgba(0, 0, 0, 1);
-  display: none;
-  top: 55px;
-  max-width: 135px;
-}
+  .sidenav{
+    display: none;
+  }
+  nav { /* menu bovenste laag maken en laten plakken aan bovenkant */
+    z-index: 5;
+    position: -webkit-sticky;
+    position: sticky;
+    float: inherit;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    background: #1e8449;
+    color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 0px;
+    height: 55px;
+    min-width: 100%;
 
-.nav-submenu-item {
-  background: rgba(0, 0, 0, 1);
-  opacity: 0;
-  font-weight: 500;
-  transition: all 0.125s ease-in;
-  transform: translateY(-10px);
-}
-.nav-menu:hover .nav-submenu-item {
+  }
 
-  transform: translateY(0);
-  opacity: 1;
-}
 
-.nav-submenu-item:hover {
-  background: rgba(150, 150, 150, 1);
+
+  nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 0 16px;
+    line-height: inherit;
+    cursor: pointer; /* cursor zelfde laten zijn als altijd bij het hoveren over een knop in het menu */
+  }
+  .nav-menu {
+    line-height: 55px;
+    font-weight: 700;
+    text-transform: uppercase; /* alle tekst in menu hoofdletters */
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+  }
+  .nav-menu-item {
+    display: inline-block;
+    position: relative;
+    background-color: rgba(0, 0, 0, 1);
+    transition: all 0.125s ease-in; /* tijdens het hoveren over menu knop 0.125s voor kleur veranderen */
+  }
+  .nav-menu-item:hover {
+    background-color: rgba(150, 150, 150, 1);
+  }
+  .nav-menu-item:hover .nav-submenu {
+    background-color: rgba(150, 150, 150, 1);
+    display: inline;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .nav-submenu {
+    font-weight: 300;
+    text-transform: none;
+    position: fixed;
+    overflow: none;
+    width: 220px;
+    background-color:rgba(0, 0, 0, 1);
+    display: none;
+    top: 55px;
+    max-width: 135px;
+  }
+
+  .nav-submenu-item {
+    background: rgba(0, 0, 0, 1);
+    opacity: 0;
+    font-weight: 500;
+    transition: all 0.125s ease-in;
+    transform: translateY(-10px);
+  }
+  .nav-menu:hover .nav-submenu-item {
+
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-submenu-item:hover {
+    background: rgba(150, 150, 150, 1);
+  }
 }
